@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask app</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css"
+    rel="stylesheet" type="text/css">
+<link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.css"
+    rel="stylesheet" type="text/css">
+
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.js"></script>
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">storm clouds</h1>
+        <strong><nav>
+          <ul class="menu">
+
+            <li><a href="{{ url_for('trimsDOT') }}">Trims DOT</a></li>
+            <li><a href="{{ url_for('blackRapids') }}">Black Rapids</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+
+  <!-- <div class="center"> -->
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  <!-- </div> -->
+  </body>
+</html>
